@@ -7,7 +7,7 @@ public class Book {
     private String editore;
 
     public void setTitolo(String titolo) {
-        if (titolo.isEmpty()) {
+        if (titolo == null || titolo.isEmpty()) {
             throw new IllegalArgumentException("E' obbligatorio inserire un titolo");
         }
         this.titolo = titolo;
@@ -29,7 +29,7 @@ public class Book {
     }
 
     public void setAutore(String autore) {
-        if (autore.isEmpty()) {
+        if (autore == null || autore.isEmpty()) {
             throw new IllegalArgumentException("E' obbligatorio inserire un autore");
         }
         this.autore = autore;
@@ -40,7 +40,7 @@ public class Book {
     }
 
     public void setEditore(String editore) {
-        if (editore.isEmpty()) {
+        if (editore == null || editore.isEmpty()) {
             throw new IllegalArgumentException("E' obbligatorio iserire un editore");
         }
         this.editore = editore;
